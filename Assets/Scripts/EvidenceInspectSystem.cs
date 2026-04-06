@@ -2,13 +2,22 @@ using UnityEngine;
 
 public class EvidenceInspectSystem : MonoBehaviour
 {
+    [Header("Inspect Settings")]
     public Transform inspectPoint;
+    public float inspectDistance = 5f;
+    public float rotationSpeed = 200f;
 
-    GameObject currentObject;
-    bool inspecting = false;
+    [Header("Player References")]
+    public SimplePlayerController playerController;
+    public CharacterController characterController;
+    public MonoBehaviour simplePlayerUse;
+    public MonoBehaviour footstepController;
 
-    Vector3 originalPosition;
-    Quaternion originalRotation;
+    private GameObject currentObject;
+    private bool inspecting = false;
+
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
 
     void Update()
     {
@@ -20,7 +29,7 @@ public class EvidenceInspectSystem : MonoBehaviour
                 StopInspect();
         }
 
-        if (inspecting)
+        if (inspecting && currentObject != null)
         {
             RotateObject();
         }
@@ -31,7 +40,7 @@ public class EvidenceInspectSystem : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 5f))
+        if (Physics.Raycast(ray, out hit, inspectDistance))
         {
             Evidence evidence = hit.collider.GetComponent<Evidence>();
 
@@ -42,28 +51,76 @@ public class EvidenceInspectSystem : MonoBehaviour
                 originalPosition = currentObject.transform.position;
                 originalRotation = currentObject.transform.rotation;
 
+                Rigidbody rb = currentObject.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.linearVelocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                    rb.isKinematic = true;
+                }
+
                 currentObject.transform.position = inspectPoint.position;
+                currentObject.transform.rotation = Quaternion.identity;
 
                 inspecting = true;
+
+                if (playerController != null)
+                    playerController.enabled = false;
+
+                if (characterController != null)
+                    characterController.enabled = false;
+
+                if (simplePlayerUse != null)
+                    simplePlayerUse.enabled = false;
+
+                if (footstepController != null)
+                    footstepController.enabled = false;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
 
                 evidence.Inspect();
             }
         }
     }
 
-    void StopInspect()  
+    void StopInspect()
     {
-        currentObject.transform.position = originalPosition;
-        currentObject.transform.rotation = originalRotation;
+        if (currentObject != null)
+        {
+            currentObject.transform.position = originalPosition;
+            currentObject.transform.rotation = originalRotation;
+
+            Rigidbody rb = currentObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
+        }
 
         inspecting = false;
         currentObject = null;
+
+        if (playerController != null)
+            playerController.enabled = true;
+
+        if (characterController != null)
+            characterController.enabled = true;
+
+        if (simplePlayerUse != null)
+            simplePlayerUse.enabled = true;
+
+        if (footstepController != null)
+            footstepController.enabled = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void RotateObject()
     {
-        float mouseX = Input.GetAxis("Mouse X") * 200 * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * 200 * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
         currentObject.transform.Rotate(Vector3.up, -mouseX, Space.World);
         currentObject.transform.Rotate(Vector3.right, mouseY, Space.World);

@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class Evidence : MonoBehaviour
 {
-    public string evidenceName;
-    private bool discovered = false;
+    public string clueID;
 
+    private bool collected = false;
+
+    // THIS FUNCTION FIXES YOUR ERROR
     public void Inspect()
     {
-        if (!discovered)
+        if (collected) return;
+
+        collected = true;
+
+        Debug.Log("Evidence inspected: " + clueID);
+
+        // Update journal
+        if (JournalManager.Instance != null)
         {
-            discovered = true;
-            Debug.Log("Evidence Found: " + evidenceName);
+            JournalManager.Instance.MarkClue(clueID);
+        }
+        else
+        {
+            Debug.LogError("JournalManager not found in scene.");
         }
     }
 }
