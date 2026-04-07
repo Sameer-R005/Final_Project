@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 926876980}
   - component: {fileID: 926876979}
   m_Layer: 0
-  m_Name: Option
+  m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
