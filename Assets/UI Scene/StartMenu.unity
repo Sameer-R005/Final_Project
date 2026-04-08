@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 547525584}
   - component: {fileID: 547525583}
   - component: {fileID: 547525582}
+  - component: {fileID: 547525585}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -433,7 +434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547525583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 7451ccc71c9e78749a940eecf3c678ee, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &547525583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +485,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547525580}
   m_CullTransparentMesh: 1
+--- !u!114 &547525585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547525580}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7451ccc71c9e78749a940eecf3c678ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartMenu
 --- !u!1 &565648768
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +716,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 954672226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 7451ccc71c9e78749a940eecf3c678ee, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &954672226
 MonoBehaviour:
   m_ObjectHideFlags: 0

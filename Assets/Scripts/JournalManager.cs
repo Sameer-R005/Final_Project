@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -6,19 +7,20 @@ public class JournalManager : MonoBehaviour
     public static JournalManager Instance;
 
     public TMP_Text journalText;
+    public GameObject investigationPrompt;
 
-    private bool bloodyKnifeFound = false;
-    private bool bloodStainFound = false;
-    private bool hammerFound = false;
-    private bool victimBodyFound = false;
-    private bool brokenGlassFound = false;
-    private bool bookFound = false;
+    private List<string> collectedEntries = new List<string>();
+    private bool promptShown = false;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+
+            if (investigationPrompt != null)
+                investigationPrompt.SetActive(false);
+
             UpdateJournalText();
         }
         else
@@ -27,42 +29,16 @@ public class JournalManager : MonoBehaviour
         }
     }
 
-    public void MarkClue(string clueID)
+    public void AddClue(string clueTitle, string clueDescription)
     {
-        Debug.Log("Trying to mark clue: " + clueID);
+        string fullEntry = "<b>" + clueTitle + "</b>\n" + clueDescription;
 
-        switch (clueID)
+        if (!collectedEntries.Contains(fullEntry))
         {
-            case "BloodyKnife":
-                bloodyKnifeFound = true;
-                break;
-
-            case "BloodStain":
-                bloodStainFound = true;
-                break;
-
-            case "Hammer":
-                hammerFound = true;
-                break;
-
-            case "VictimBody":
-                victimBodyFound = true;
-                break;
-
-            case "BrokenGlass":
-                brokenGlassFound = true;
-                break;
-
-            case "Book":
-                bookFound = true;
-                break;
-
-            default:
-                Debug.LogWarning("Unknown clue ID: " + clueID);
-                return;
+            collectedEntries.Add(fullEntry);
+            UpdateJournalText();
+            CheckAllEvidenceCollected();
         }
-
-        UpdateJournalText();
     }
 
     void UpdateJournalText()
@@ -73,12 +49,37 @@ public class JournalManager : MonoBehaviour
             return;
         }
 
-        journalText.text =
-            (bloodyKnifeFound ? "[X] " : "[ ] ") + "Bloody Knife\n" +
-            (bloodStainFound ? "[X] " : "[ ] ") + "Blood Stain\n" +
-            (hammerFound ? "[X] " : "[ ] ") + "Hammer\n" +
-            (victimBodyFound ? "[X] " : "[ ] ") + "Victim Body\n" +
-            (brokenGlassFound ? "[X] " : "[ ] ") + "Broken Glass\n" +
-            (bookFound ? "[X] " : "[ ] ") + "Book";
+        if (collectedEntries.Count == 0)
+        {
+            journalText.text = "Evidence Collected:\n\nNo evidence collected yet.";
+            return;
+        }
+
+        journalText.text = "Evidence Collected:\n\n";
+
+        for (int i = 0; i < collectedEntries.Count; i++)
+        {
+            journalText.text += collectedEntries[i] + "\n\n";
+        }
+    }
+
+    void CheckAllEvidenceCollected()
+    {
+        if (promptShown) return;
+
+        int totalRequiredClues = 8;
+
+        if (collectedEntries.Count >= totalRequiredClues)
+        {
+            promptShown = true;
+
+            if (investigationPrompt != null)
+            {
+                investigationPrompt.SetActive(true);
+                Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
     }
 }

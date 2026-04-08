@@ -14288,7 +14288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
       propertyPath: m_Name
-      value: 543 - Ring (for Sketchfab)
+      value: Ring
       objectReference: {fileID: 0}
     - target: {fileID: 5694059874591286030, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -14297,8 +14297,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 185347514}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 185347513}
   m_SourcePrefab: {fileID: 100100000, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
+--- !u!1 &185347512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e4711d69863cde4abf59105f63d94c9, type: 3}
+  m_PrefabInstance: {fileID: 185347511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &185347513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185347512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: Wedding ring
+  clueDescription: So whoever it is, they didn't wanna wear it while killing someone.
+--- !u!114 &185347514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185347512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
 --- !u!1 &185727930
 GameObject:
   m_ObjectHideFlags: 0
@@ -20718,8 +20756,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0183f10179924ad48973fe1adf295652, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 270896771}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0183f10179924ad48973fe1adf295652, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 270896770}
   m_SourcePrefab: {fileID: 100100000, guid: 0183f10179924ad48973fe1adf295652, type: 3}
+--- !u!1 &270896769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0183f10179924ad48973fe1adf295652, type: 3}
+  m_PrefabInstance: {fileID: 270896768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &270896770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270896769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
+--- !u!114 &270896771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270896769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: Shattered Specs
+  clueDescription: The killer dropped these for sure..
 --- !u!4 &271614337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3809629981771083003, guid: 96679e7354c5a4740bfd17ef52685391, type: 3}
@@ -52328,6 +52404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JournalManager
   journalText: {fileID: 1460995476}
+  investigationPrompt: {fileID: 0}
 --- !u!4 &661010174
 Transform:
   m_ObjectHideFlags: 0
@@ -115580,13 +115657,51 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2ddfdfd0b620b6a49bac30db5ceedef7, type: 2}
     - target: {fileID: 919132149155446097, guid: 557d74d1d3b160f4db84b5fab2f0f2fd, type: 3}
       propertyPath: m_Name
-      value: shovel
+      value: Shovel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 557d74d1d3b160f4db84b5fab2f0f2fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448134399}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 557d74d1d3b160f4db84b5fab2f0f2fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448134398}
   m_SourcePrefab: {fileID: 100100000, guid: 557d74d1d3b160f4db84b5fab2f0f2fd, type: 3}
+--- !u!1 &1448134397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 557d74d1d3b160f4db84b5fab2f0f2fd, type: 3}
+  m_PrefabInstance: {fileID: 1448134396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1448134398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448134397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: Shovel
+  clueDescription: This was definetly there when the lantern was droppped..
+--- !u!114 &1448134399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448134397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
 --- !u!1001 &1449548340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124143,13 +124258,51 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 663911c0e1e52bb44b410229df4cfab7, type: 2}
     - target: {fileID: 919132149155446097, guid: a09a165ed92d2ba47a04c7eb82224af1, type: 3}
       propertyPath: m_Name
-      value: TeddyBearPT
+      value: TeddyBear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a09a165ed92d2ba47a04c7eb82224af1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1555389637}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a09a165ed92d2ba47a04c7eb82224af1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1555389636}
   m_SourcePrefab: {fileID: 100100000, guid: a09a165ed92d2ba47a04c7eb82224af1, type: 3}
+--- !u!1 &1555389635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a09a165ed92d2ba47a04c7eb82224af1, type: 3}
+  m_PrefabInstance: {fileID: 1555389634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1555389636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555389635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
+--- !u!114 &1555389637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555389635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: 'Teddy Bear '
+  clueDescription: 
 --- !u!4 &1555720275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1469324416706705236, guid: e8586dfb1dd1e9c4ba7b1315120d1343, type: 3}
@@ -124515,7 +124668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1560849970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132044,13 +132197,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 84686d4342fc0a141a1973340ea05caf, type: 3}
       propertyPath: m_Name
-      value: Lantern-03
+      value: Lantern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84686d4342fc0a141a1973340ea05caf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1659753548}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 84686d4342fc0a141a1973340ea05caf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1659753547}
   m_SourcePrefab: {fileID: 100100000, guid: 84686d4342fc0a141a1973340ea05caf, type: 3}
+--- !u!1 &1659753546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 84686d4342fc0a141a1973340ea05caf, type: 3}
+  m_PrefabInstance: {fileID: 1659753545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659753547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659753546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
+--- !u!114 &1659753548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659753546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: Lantern
+  clueDescription: 'Maybe he got startled? Maybe that''s why he dropped it? '
 --- !u!4 &1659836876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 233874203093036174, guid: a67f0338e03f8fc488608e03de10dd56, type: 3}
@@ -170130,14 +170321,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf40c2c5669323e49900d579040023ff, type: 3}
---- !u!33 &136281202657876362
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306929129835271047}
-  m_Mesh: {fileID: -8372214687318096351, guid: 285afa0f046daaa49974bca31542737a, type: 3}
 --- !u!1 &138966090128262000
 GameObject:
   m_ObjectHideFlags: 0
@@ -170456,24 +170639,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00023672497, y: 0.011541722, z: -0.0013367927}
     m_Extent: {x: 0.005655076, y: 0.010027939, z: 0.0069098063}
   m_DirtyAABB: 0
---- !u!1 &306929129835271047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8578916147447490758}
-  - component: {fileID: 136281202657876362}
-  - component: {fileID: 5482928651147122272}
-  m_Layer: 0
-  m_Name: Bottle2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &323858143983570184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174563,7 +174728,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2017545587905226567}
-  - {fileID: 8578916147447490758}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.586}
 --- !u!1 &3521714515305773332
@@ -174577,6 +174741,8 @@ GameObject:
   - component: {fileID: 2017545587905226567}
   - component: {fileID: 3912683452608840616}
   - component: {fileID: 8905526005085570190}
+  - component: {fileID: 8905526005085570192}
+  - component: {fileID: 8905526005085570191}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -175153,7 +175319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Evidence
-  clueID: Book
+  clueTitle: Forgotten Runes - Book
+  clueDescription: 'A simple book. But its thick enough to hit someone in the head.
+    And the runes... seems a bit familiar.  '
 --- !u!65 &4070291031870381393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -177598,55 +177766,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdab9883a72db4d4990483fa46298bd6, type: 3}
---- !u!23 &5482928651147122272
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306929129835271047}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 22da60f18641eda4daa07711ee6b61f7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5486150233478136578
 GameObject:
   m_ObjectHideFlags: 0
@@ -180668,7 +180787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Evidence
-  clueID: BloodyKnife
+  clueTitle: 'Cleaver '
+  clueDescription: 'A cleaver with some blood on it. This couldnt get more obvious.. '
 --- !u!114 &7784142910926277120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181625,21 +181745,6 @@ Transform:
   - {fileID: 5635684381658798297}
   m_Father: {fileID: 9064592421705061017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &8578916147447490758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306929129835271047}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.63617176, y: -0.43351468, z: -0.3204889, w: -0.5519398}
-  m_LocalPosition: {x: -1.58, y: -20.58, z: 25.54}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3499865728478283658}
-  m_LocalEulerAnglesHint: {x: -205.112, y: -78.19202, z: -89.06}
 --- !u!33 &8597263035377151992
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -181681,7 +181786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Evidence
-  clueID: Hammer
+  clueTitle: Hammer
+  clueDescription: 'The Hammer, really seems out of place. Could this be it...? Maybe '
 --- !u!114 &8597263035377151995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182053,6 +182159,33 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8905526005085570191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3521714515305773332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a1d4dd13bc04287d34be328d0319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Evidence
+  clueTitle: 'Broken Bottle '
+  clueDescription: Was thiss used for the homicide? Or it's just happened to be here?
+--- !u!114 &8905526005085570192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3521714515305773332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bb1e7bd590d794e96b122c95104edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectTrigger
+  inspectUI: {fileID: 1421153322}
 --- !u!1001 &8969908903855811428
 PrefabInstance:
   m_ObjectHideFlags: 0

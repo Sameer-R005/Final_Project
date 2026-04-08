@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class Evidence : MonoBehaviour
 {
-    public string clueID;
+    public string clueTitle;
+
+    [TextArea(2, 5)]
+    public string clueDescription;
 
     private bool collected = false;
 
-    // THIS FUNCTION FIXES YOUR ERROR
     public void Inspect()
     {
         if (collected) return;
 
         collected = true;
 
-        Debug.Log("Evidence inspected: " + clueID);
+        Debug.Log("Evidence inspected: " + clueTitle);
 
-        // Update journal
         if (JournalManager.Instance != null)
         {
-            JournalManager.Instance.MarkClue(clueID);
+            JournalManager.Instance.AddClue(clueTitle, clueDescription);
         }
         else
         {
