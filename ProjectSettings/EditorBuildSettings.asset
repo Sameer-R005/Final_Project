@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/InvestiagationScene/Conclusion.unity
     guid: c3b2418e36cbebe44ad82a189ddad19c
+  - enabled: 1
+    path: Assets/UI Scene/GameOver.unity
+    guid: a72fe26667f55c742bdffb2783c1968d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
