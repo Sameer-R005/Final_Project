@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/UI Scene/StartMenu.unity
     guid: 553fbcb3c910e3d45a23e492a192b4c0
   - enabled: 1
+    path: Assets/UI Scene/Narration.unity
+    guid: ab59516464452874994fe32a7ce66740
+  - enabled: 1
     path: Assets/AtmosphericHouse/Scenes/CrimeScene.unity
     guid: 69341aa2f2a506540b1e6e7ca2eab5e4
   - enabled: 1
@@ -29,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/InvestiagationScene/Invi3.unity
     guid: fd3b100fb81c61e4b8fc6e66c795dde1
+  - enabled: 1
+    path: Assets/InvestiagationScene/Conclusion.unity
+    guid: c3b2418e36cbebe44ad82a189ddad19c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
