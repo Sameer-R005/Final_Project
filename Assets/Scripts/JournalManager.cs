@@ -67,7 +67,7 @@ public class JournalManager : MonoBehaviour
     {
         if (promptShown) return;
 
-        int totalRequiredClues = 8;
+        int totalRequiredClues = 9;
 
         if (collectedEntries.Count >= totalRequiredClues)
         {

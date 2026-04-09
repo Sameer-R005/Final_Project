@@ -25,5 +25,14 @@ public class Evidence : MonoBehaviour
         {
             Debug.LogError("JournalManager not found in scene.");
         }
+
+        if (ClueCounterUI.Instance != null)
+        {
+            ClueCounterUI.Instance.AddClue();
+        }
+        else
+        {
+            Debug.LogError("ClueCounterUI not found in scene.");
+        }
     }
 }

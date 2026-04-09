@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/UI Scene/PauseMenu.unity
-    guid: 7cfe2dc611cf30d4992398a93bff4873
   - enabled: 1
     path: Assets/UI Scene/Intro.unity
     guid: 99afeff8e69d7754ca4f2a6eda0ff6fc
@@ -38,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UI Scene/GameOver.unity
     guid: a72fe26667f55c742bdffb2783c1968d
+  - enabled: 1
+    path: Assets/UI Scene/Win.unity
+    guid: 4c9f8eed6fc2a06459ae3f289a178351
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

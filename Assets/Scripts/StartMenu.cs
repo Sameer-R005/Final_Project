@@ -5,12 +5,13 @@ public class StartMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("CrimeScene");
+        Debug.Log("Start button clicked");
+        SceneManager.LoadScene(2);
     }
 
     public void QuitGame()
     {
+        Debug.Log("Quit Game");
         Application.Quit();
-        Debug.Log("Game Quit");
     }
 }
